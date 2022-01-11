@@ -22,10 +22,20 @@ public class GetMaximum {
         }
         return max;
     }
+    public static String maximum(String x, String y, String z) {
+
+        String max = x;
+        if (y.compareTo(max) > 0) {
+            max = y;
+        }
+        if (z.compareTo(max) > 0) {
+            max = z;
+        }
+        return max;
+    }
 
     public static void main(String[] args) {
-        System.out.printf("Max of %.1f,%.1f and %.1f is %.1f\n\n",
-                6.6, 8.8, 7.7, maximumFloat((float) 6.6, (float) 8.8, (float) 7.7));
-
+        System.out.printf("Max of %s, %s and %s is %s\n","peach",
+                "apple", "banana", maximum("peach", "apple", "banana"));
     }
 }
